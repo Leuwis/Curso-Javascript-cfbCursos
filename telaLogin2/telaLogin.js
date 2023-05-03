@@ -122,7 +122,6 @@ class Login{
         .then(res=>res.json())
         .then(res=>{
             if(res){
-                console.log("asdfashdfjlashdfjl")
                 sessionStorage.setItem("logado", "true");
                 sessionStorage.setItem("matlogado", mat);
                 sessionStorage.setItem("nomelogado", res.nome);
@@ -145,6 +144,7 @@ class Login{
         id_estiloLogin.remove();
     }
 }
+
 //  export {Login};
 
 //-----------------------------------------------------------CONTEUDO DA API UTILIZADA (REPLIT) -------------------------------------------------------------------------
