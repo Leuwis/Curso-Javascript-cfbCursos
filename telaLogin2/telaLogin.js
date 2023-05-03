@@ -8,11 +8,11 @@ class Login{
     static callback_naook=null;
     static config={
         cor:"048",
-        img:"./img/logo.png"
+        img:"./img/logo.png",
+        endpoint : null //="https://loginv1.cfbcursos.repl.co/";
     };
-    static endpoint="https://loginv1.cfbcursos.repl.co/";
     
-    static login=(callback_ok,callback_naook,config=null)=>{
+    static login=(callback_ok,callback_naook,config)=>{
         if(config!=null){
             this.config=config;
         }
@@ -28,7 +28,7 @@ class Login{
         ".campoLogin label{font-size:18px;}"+
         ".campoLogin input{font-size:18px; padding:5px; background-color:#fff; border-radius:5px;}"+
         ".botoesLogin{display:flex; justify-content:space-around; align-items:center; width:100%; box-sizing:inherit;}"+
-        `.botoesLogin button{cursor:pointer; background-color:#${this.config.cor}; color:#fff; border-radius:5px; padding:10px; width:100px; box-sizing:inherit;}`
+        `.botoesLogin button{cursor:pointer; background-color:#${config.cor}; color:#fff; border-radius:5px; padding:10px; width:100px; box-sizing:inherit;}`
 
         const styleEstilo=document.createElement("style");
         styleEstilo.setAttribute("id","id_estiloLogin");
@@ -117,22 +117,23 @@ class Login{
         const mat=document.querySelector("#f_username").value;
         const pas=document.querySelector("#f_senha").value;
 
-        const endpoint=`https://loginv1.cfbcursos.repl.co/?matricula=${mat}&senha=${pas}`;
+        const endpoint=`${this.config.endpoint}?matricula=${mat}&senha=${pas}`;
         fetch(endpoint)
         .then(res=>res.json())
         .then(res=>{
             if(res){
-                this.logado=true;
-                this.matlogado=mat;
-                this.nomelogado=res.nome;
-                this.acessologado=res.acesso;
+                consoel.log("asdfashdfjlashdfjl")
+                sessionStorage.setItem("logado", "true");
+                sessionStorage.setItem("matlogado", mat);
+                sessionStorage.setItem("nomelogado", res.nome);
+                sessionStorage.setItem("acessologado", res.acesso);
                 this.callback_ok();
                 this.fechar();
             }else{
-                this.logado=false;
-                this.matlogado=null;
-                this.nomelogado=null;
-                this.acessologado=null;
+                sessionStorage.setItem("logado", "false");
+                sessionStorage.setItem("matlogado", "");
+                sessionStorage.setItem("nomelogado", "");
+                sessionStorage.setItem("acessologado", "");
                 this.callback_naook();
             }
         })
@@ -145,3 +146,29 @@ class Login{
     }
 }
 // export {Login};
+
+//-----------------------------------------------------------CONTEUDO DA API UTILIZADA-------------------------------------------------------------------------
+
+// var http = require('http');
+// var url = require('url');
+// var resquest = require('request');
+// http.createServer(function(req, res) {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.writeHead(200, { 'Content-Type': 'application/json' });
+
+//   let parametros = url.parse(req.url, true);
+
+//   let mat = parametros.query.matricula;
+//   let pas = parametros.query.senha;
+
+//   let dados = null;
+
+//   if (mat == "123" && pas == "321") {
+//     dados = {
+//       nome: "Deivid",
+//       acesso: 10
+//     }
+//   }
+
+//   res.end(JSON.stringify(dados));
+// }).listen(8080);
