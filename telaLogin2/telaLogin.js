@@ -122,17 +122,19 @@ class Login{
         .then(res=>res.json())
         .then(res=>{
             if(res){
-                sessionStorage.setItem("logado", "true");
-                sessionStorage.setItem("matlogado", mat);
-                sessionStorage.setItem("nomelogado", res.nome);
+                console.log("true");
+                window.sessionStorage.setItem("logado", "true");
+                window.sessionStorage.setItem("matlogado", mat);
+                window.sessionStorage.setItem("nomelogado", res.nome);
                 sessionStorage.setItem("acessologado", res.acesso);
                 this.callback_ok();
                 this.fechar();
             }else{
-                sessionStorage.setItem("logado", "false");
-                sessionStorage.setItem("matlogado", "");
-                sessionStorage.setItem("nomelogado", "");
-                sessionStorage.setItem("acessologado", "");
+                console.log("false");
+                window.sessionStorage.setItem("logado", "false");
+                window.sessionStorage.setItem("matlogado", "");
+                window.sessionStorage.setItem("nomelogado", "");
+                window.sessionStorage.setItem("acessologado", "");
                 this.callback_naook();
             }
         })
