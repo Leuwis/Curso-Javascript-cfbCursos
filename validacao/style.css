@@ -1,0 +1,27 @@
+*{
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+}
+
+input{
+    border: 3px solid #aaa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button{
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #888;
+    color: #fff;
+}

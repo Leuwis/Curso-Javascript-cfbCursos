@@ -1,0 +1,17 @@
+/* .topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+}
+
+.logo img{
+    width: 80px;
+} */
+
+.btn_mostrarcxmsg{
+    padding:10px 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}

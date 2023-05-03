@@ -1,0 +1,21 @@
+*{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #888;
+    color: #fff;
+}
+
+input{
+    border: 3px solid #aaa;
+    border-radius:5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
