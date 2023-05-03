@@ -17,7 +17,7 @@ const callback_naook=()=>{
 const configLogin={
     cor:"048",
     img:"./img/logo.png",
-    endpoint:"https://loginv1.cfbcursos.repl.co/"
+    endpoint:"https://loginv1.deividlima1.repl.co"
 }
 
 Login.login(callback_ok, callback_naook, configLogin);
