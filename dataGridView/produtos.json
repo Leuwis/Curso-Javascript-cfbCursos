@@ -1,0 +1,32 @@
+[
+    {
+        "id":"01",
+        "produto":"Processador",
+        "marca":"Intel",
+        "modelo":"I7"
+    },
+    {
+        "id":"02",
+        "produto":"Mouse",
+        "marca":"Logitech",
+        "modelo":"M90"
+    },
+    {
+        "id":"03",
+        "produto":"Monitor",
+        "marca":"Sansung",
+        "modelo":"SYncmaster"
+    },
+    {
+        "id":"04",
+        "produto":"Impressora",
+        "marca":"HP",
+        "modelo":"P1005"
+    },
+    {
+        "id":"05",
+        "produto":"Drone",
+        "marca":"DJ!",
+        "modelo":"Mini 3 Pro"
+    }
+]

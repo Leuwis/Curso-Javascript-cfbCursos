@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="dgvProdutos" class="dgv">
+        <div id="dgvTitulos" class="dgvTitulos">
+            <div class="c1">ID</div>
+            <div class="c2">Produto</div>
+            <div class="c3">Marca</div>
+            <div class="c4">Modelo</div>
+            <div class="c5">Funções</div>
+        </div>
+        <div id="dgvDados" class="dgvDados">            
+        </div>
+    </div>
+
+    <div id="janelaView" class="janelaView ocultar">
+        <div id="view" class="view">
+            <div class="campo">
+                <label for="">ID</label>
+                <input type="text" name="f_id" id="f_id" readonly>
+            </div>
+            <div class="campo">
+                <label for="">Produto </label>
+                <input type="text" name="f_produto" id="f_produto" readonly>
+            </div>
+            <div class="campo">
+                <label for="">Marca</label>
+                <input type="text" name="f_marca" id="f_marca" readonly>
+            </div>
+            <div class="campo">
+                <label for="">Modelo</label>
+                <input type="text" name="f_modelo" id="f_modelo" readonly>
+            </div>
+            <div class="campo rodape">
+                    <button id="btn_ok" class="btn ocultar">OK</button>
+                    <div>
+
+                        <button id="btn_edita_confirma" class="btn">Confirmar</button>
+                        <button id="btn_edita_cancela" class="btn">Cancelar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="adicionar">
+        <button id="btn_adicionar" class="btn">Adicionar produto</button>
+    </div>
+
+    <div id="janelaAdiciona" class="janelaAdiciona ocultar">
+        <div id="addView" class="view">
+            <div class="campo">
+                <label for="">Produto </label>
+                <input type="text" name="add_produto" id="add_produto">
+            </div>
+            <div class="campo">
+                <label for="">Marca</label>
+                <input type="text" name="add_marca" id="add_marca">
+            </div>
+            <div class="campo">
+                <label for="">Modelo</label>
+                <input type="text" name="add_modelo" id="add_modelo">
+            </div>
+            <div class="campo rodape">
+                <div>
+                    <button id="btn_adiciona_confirma" class="btn">Confirmar</button>
+                    <button id="btn_adiciona_cancela" class="btn">Cancelar</button>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    
+    
+    <script src="script.js" type="module"></script>
+</body>
+</html>
