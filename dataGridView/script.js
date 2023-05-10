@@ -12,6 +12,7 @@ const btn_adicionar         = document.getElementById("btn_adicionar");
 const btn_adiciona_confirma = document.getElementById("btn_adiciona_confirma");
 const btn_adiciona_cancela  = document.getElementById("btn_adiciona_cancela");
 const janelaAdiciona        = document.getElementById("janelaAdiciona");
+const editar = document.getElementById("editar");
 
 const janelaView = document.querySelector("#janelaView");
 

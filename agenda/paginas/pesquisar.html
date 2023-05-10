@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../agenda.css">
+</head>
+<body>
+    
+    <div id="pesquisa" class="pesquisa">
+        <div id="campoPesq" class="campoPesq">
+            <label for="">ID</label>
+            <input type="radio" name="f_pesq" value="id">
+        </div>
+        <div id="campoPesq" class="campoPesq">
+            <label for="">Nome</label>
+            <input type="radio" name="f_pesq" value="nome" checked>
+        </div>
+        <div id="campoPesq" class="campoPesq">
+            <label for="">Celular</label>
+            <input type="radio" name="f_pesq" value="celular">
+        </div>
+        <div id="campoPesq" class="campoPesq">
+            <label for="">E-mail</label>
+            <input type="radio" name="f_pesq" value="email">
+        </div>
+        <div id="campoPesq" class="campoPesq">
+            <label for="">Data nascimento</label>
+            <input type="radio" name="f_pesq" value="dtnas">
+        </div>
+        <div id="campoPesq" class="campoPesq">
+            <label for="">pesquisar</label>
+            <input type="text" name="txt_pesquisa" id="txt_pesquisa">
+        </div>
+        <div id="campoPesq" class="campoPesq">
+            <button class="btn_geral" id="btn_pesquisa">Pesquisar</button>
+        </div>
+    </div>
+    <div class="dgv">
+
+        <div id="resultado" class="resultado">
+            <div id="titulos" class="titulos">
+                <div class="titulo c1">ID</div>
+                <div class="titulo c2">Nome</div>
+                <div class="titulo c3">Celular</div>
+                <div class="titulo c4">Email</div>
+                <div class="titulo c5">Data de Nascimento</div>
+            </div>
+            <div id="dados" class="dados">
+                
+            </div>
+        </div>
+    </div>
+    <script src="pesquisar.js"></script>
+</body>
+</html>
+
